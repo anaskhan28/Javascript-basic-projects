@@ -1,20 +1,21 @@
-function clock() {
-const fullDate = new Date();
-let hours = fullDate.getHours();
-let min = fullDate.getMinutes();
-let sec = fullDate.getSeconds();
-if(hours < 10){
-    hours = "0" + hours;
-}else if(minute<10){
-    min = "0" + min;
+function clock(){
+    const fullDate = new Date();
+    const hours = fullDate.getHours();
+    const mins = fullDate.getMinutes();
+    const secs = fullDate.getSeconds();
 
-}else if(second <10 ){
-    sec = "0" + sec;
+    if(hours<10){
+        hours = "0" + hours;
+    }
+    if(mins<10){
+        mins = "0" + mins;
+    }
+    if(secs<10){
+        secs = "0" + secs;
+    }
+
+    document.getElementById('hour').innerHTML =  hours;
+    document.getElementById('minute').innerHTML =":" +mins;
+    document.getElementById('second').innerHTML = ":" +secs;
 }
-document.getElementById('hour:').innerHTML = hours;
-document.getElementById('minutes:').innerHTML = min;
-document.getElementById('seconds').innerHTML = sec;
-}
-
-setInterval(clock, 100);
-
+setInterval(clock,1000);
