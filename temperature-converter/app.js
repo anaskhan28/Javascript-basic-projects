@@ -34,6 +34,9 @@ function kelvinToAll(){
     fahrenheitInput.value = roundNum(fTemp);
 }
 
-celciusInput.addEventListener('input', celciusToAll ); 
-fahrenheitInput.addEventListener('input', fahrenheitToAll ); 
-kelvinInput.addEventListener('input', kelvinToAll); 
+function main(){
+    celciusInput.addEventListener('input', celciusToAll ); 
+    fahrenheitInput.addEventListener('input', fahrenheitToAll ); 
+    kelvinInput.addEventListener('input', kelvinToAll); 
+}
+main();
