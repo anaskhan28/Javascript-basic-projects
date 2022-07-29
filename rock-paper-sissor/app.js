@@ -22,10 +22,10 @@ function convertToWord(letter){
 }
 
 function win(userChoice, computerChoice){
+    userScore++;
     userScore_span.innerHTML= userScore;
     computerScore_span.innerHTML =  computerScore;
     const userChoice_div = document.getElementById(userChoice);
-    userScore++;
     const smallUserWord = "[user]".fontsize(3).sub();
     const smallCompWord = "[comp]".fontsize(3).sub();
     result_p.innerHTML=`${convertToWord(userChoice)}${smallUserWord} beats to ${convertToWord(computerChoice)}${smallCompWord}. You Win!❤️‍🔥`
@@ -34,10 +34,10 @@ function win(userChoice, computerChoice){
 }
 
 function loose(userChoice, computerChoice){
+    computerScore++;
     userScore_span.innerHTML= userScore;
     computerScore_span.innerHTML =  computerScore;
     const userChoice_div = document.getElementById(userChoice);
-    computerScore++;
     const smallUserWord = "[user]".fontsize(3).sub();
     const smallCompWord = "[comp]".fontsize(3).sub();
     result_p.innerHTML=`${convertToWord(userChoice)}${smallUserWord} looses to ${convertToWord(computerChoice)}${smallCompWord}. You LOST!🤧`
@@ -66,11 +66,11 @@ function game(userChoice){
             case "ps":
                 loose(userChoice, computerChoice);
                 break;
-                case "rr":
+                    case "rr":
                     case "pp":
-                        case "ss":
-                            draw(userChoice, computerChoice);
-                            break;
+                    case "ss":
+                    draw(userChoice, computerChoice);
+                    break;
 
     }
 }
